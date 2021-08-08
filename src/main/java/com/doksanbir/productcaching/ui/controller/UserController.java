@@ -20,7 +20,7 @@ public class UserController {
         this.userService = userService;
     }
 
-    @PostMapping()
+    @PostMapping
     public ResponseEntity<?> createUser(
             @Valid @RequestBody UserDtoPost userDtoPost) {
         userService.createUser(userDtoPost);
@@ -28,7 +28,7 @@ public class UserController {
         return new ResponseEntity<>(userDtoPost,HttpStatus.CREATED);
     }
 
-    @GetMapping()
+    @GetMapping
     public ResponseEntity<?> getUser(@Valid @RequestParam String email){
         return new ResponseEntity<>(userService.getUser(email),HttpStatus.ACCEPTED);
     }

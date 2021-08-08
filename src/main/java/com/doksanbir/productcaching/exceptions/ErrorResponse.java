@@ -3,11 +3,8 @@ package com.doksanbir.productcaching.exceptions;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
 
-@Setter
-@Getter
-@NoArgsConstructor
+@Data
 @AllArgsConstructor
-@Builder
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class ErrorResponse {
     private String code;

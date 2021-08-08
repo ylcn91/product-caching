@@ -47,7 +47,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserDtoGet getUser(String email) {
         try {
-            System.out.println("Going to sleep for 5 Secs. to simulate backend call.");
+            System.out.println("To simulate backend call.");
             Thread.sleep(1000*5);
         }catch (InterruptedException e) {
             e.printStackTrace();
